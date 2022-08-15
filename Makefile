@@ -7,4 +7,4 @@ run: ./unit_tests/*.cpp ./src/*.cpp
 	./$@ -c
 clean:
 	rm -f run
-re: clean all
+re: clean run
