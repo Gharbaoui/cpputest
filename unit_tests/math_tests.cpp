@@ -1,5 +1,5 @@
 #include <CppUTest/TestHarness.h>
-#include "../src/math.hpp"
+#include "../src/glob_headers.hpp"
 #include <iostream>
 
 
@@ -18,6 +18,17 @@ TEST_GROUP(FirstTestGroup)
 	}
 };
 
+TEST_GROUP(SecondTestGroup)
+{
+
+};
+
+
+TEST(SecondTestGroup, CatTest)
+{
+	CHECK_TEXT(is_it_cat("CAt"), "this is not cat");
+	CHECK_TEXT(is_it_cat("dog"), "this is not cat");
+}
 
 TEST(FirstTestGroup, First)
 {
